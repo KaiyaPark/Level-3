@@ -11,8 +11,8 @@ public class LearningArrayLists {
 		testList.add(string);
 	}
 
-	public static ArrayList getNumberOfItems(ArrayList testList) {
-		ArrayList<Integer> number = new ArrayList<Integer>();
+	public static int getNumberOfItems(ArrayList testList) {
+		int number = testList.size();
 		return number;
 	}
 
@@ -31,8 +31,8 @@ public class LearningArrayLists {
 	}
 
 	public static Object findItemOnList(ArrayList testList, String string) {
-		// TODO Auto-generated method stub
-		return null;
+		int t = testList.indexOf(string);
+		return t;
 	}
 
 	public static ArrayList<String> createStringTypedArrayList() {
@@ -45,6 +45,30 @@ public class LearningArrayLists {
 		for (int i = 0; i < testList.size(); i++) {
 			String t = testList.get(i);
 			w = w.concat(t);
+		}
+		return w;
+	}
+
+	public static void replaceItem(ArrayList testList, int i, String string) {
+		testList.set(i, string);
+
+	}
+
+	public static ArrayList<Integer> createTypedArrayList() {
+		ArrayList<Integer> t = new ArrayList<Integer>();
+		return t;
+	}
+
+	public static void insertItem(ArrayList testList, int i, String string) {
+		testList.add(i, string);
+
+	}
+
+	public static Object addAllInteger(ArrayList<Integer> testList) {
+		int w = 0;
+		for (int i = 0; i < testList.size(); i++) {
+			Integer t = testList.get(i);
+			w = w + t;
 		}
 		return w;
 	}
